@@ -1,0 +1,29 @@
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+<div *ngIf="!loading" class="container">
+  <div class="title">
+    <h4>Listado de Hamburguesa</h4>
+    <button type="button" class="btn btn-dark" [routerLink]="['/listhamburguesa/add']">Agregar Hamburguesa</button>
+  </div>
+
+  <table *ngIf="listHamburguesa.length > 0" class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">descripcion</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listHamburguesa" class="table-dark">
+        <td>{{ item.nombre }}</td>
+        <td>{{ item.descripcion }}</td>
+        <td></td>
+        <td>
+          <button [routerLink]="['/listhamburguesa/edit/', item.idHamburguesa]" type="button" class="btn btn-info btn-sm">EDITAR</button>
+          <button type="button" class="btn btn-danger btn-sm me-sm-2">ELIMINAR</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 *ngIf="listHamburguesa.length == 0">No hay Hamburguesa disponibles en este momento</h5>
+</div>

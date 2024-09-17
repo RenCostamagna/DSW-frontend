@@ -1,0 +1,31 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    }
+    .background{
+    position: absolute;
+    top:0;
+    Left:0;
+    width:100%;
+    min-height: 100vh;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20240229/pngtree-various-dishes-of-burgers-with-meat-image_15633680.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(10px);
+    }
+    
+    .content{
+        color: #fff;
+        margin-top: 200px;
+        text-align: center;
+    }
+    .content h1{
+        font-size: 95px;
+        margin-bottom: 10px;
+    }
+    .content p{
+        font-size: 35px;
+    }

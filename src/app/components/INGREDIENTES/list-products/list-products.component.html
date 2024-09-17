@@ -1,0 +1,29 @@
+
+<app-progress-bar *ngIf="loading"></app-progress-bar>
+<div *ngIf="!loading" class="container">
+  <div class="title">
+    <h4>Listado de Ingredientes</h4>
+    <button type="button" class="btn btn-dark" [routerLink]="['/listingredients/add']">Agregar Ingrediente</button>
+  </div>
+
+  <table *ngIf="listProducts.length > 0" class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Descripción</th>
+        <th scope="col">Stock</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listProducts" class="table-dark">
+        <td>{{ item.descripcion }}</td>
+        <td>{{ item.stock }}</td>
+        <td>
+          <button [routerLink]="['/listingredients/edit/', item.codIngrediente]" type="button" class="btn btn-info btn-sm">EDITAR</button>
+          <button (click)="deleteIngrediente(item.codIngrediente!)" type="button" class="btn btn-danger btn-sm me-sm-2">ELIMINAR</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 *ngIf="listProducts.length == 0">No hay ingredientes disponibles en este momento</h5>
+</div>
