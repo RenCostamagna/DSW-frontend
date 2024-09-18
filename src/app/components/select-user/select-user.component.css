@@ -1,0 +1,85 @@
+/* Estilos para centrar el contenido */
+.select-user-container {
+    display: flex;
+    flex-direction: column; /* Alinea elementos en una columna (vertical) */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    text-align: center; /* Centra el texto */
+  }
+
+  .select-user-container h1 {
+  font-family: 'Arial', sans-serif; /* Cambia la fuente según prefieras */
+  font-size: 100px; /* Tamaño de la fuente */
+  font-weight: bold;
+  color: #ffffff; /* Color del texto */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas */
+  letter-spacing: 0.5px; /* Espaciado entre letras */
+  margin-bottom: 30px; /* Separación del título respecto a los botones */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra de texto para dar profundidad */
+  transition: transform 0.3s ease; /* Animación para hover */
+}
+
+/* Efecto al pasar el ratón sobre el texto */
+.select-user-container h1:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+.select-user-container h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 48px; /* Tamaño de fuente del h1 */
+    color: #ffffff; /* Color blanco */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    transition: transform 0.3s ease;
+  }
+  
+  .select-user-container h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px; /* Tamaño de fuente más pequeño para el h2 */
+    color: #ffffff; /* Mismo color que el h1 */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra más ligera para h2 */
+    font-weight: normal;
+    text-align: center;
+  }
+  
+  
+  /* Estilo de los botones */
+  button {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 200px; /* Ancho fijo de 200px */
+    text-align: center;
+  }
+  
+  /* Cambiar color al pasar el ratón */
+  button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+  }
+  
+  /* Cambiar color al hacer clic */
+  button:active {
+    background-color: #1c6690;
+    transform: translateY(1px);
+  }
+  
+  /* Enfoque con borde blanco */
+  button:focus {
+    outline: none;
+    border: 2px solid #ffffff;
+  }
+  
